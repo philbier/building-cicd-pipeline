@@ -3,7 +3,7 @@
 # building-cicd-pipeline
 This is the final project for the course "Building a CI/CD pipeline" as part of of the Udacity Cloud DevOps Nanodegree
 
-![Set up Azure Cloud Shell](./img/set_up_az_shell.PNG)
+![Set up Azure Cloud Shell](./img/set_up_az_shell.png)
 
 
 
@@ -11,11 +11,11 @@ This is the final project for the course "Building a CI/CD pipeline" as part of 
 
 
 
-![Configure GitHub Actions](./img/configure_github_actions.PNG)
+![Configure GitHub Actions](./img/configure_github_actions.png)
 
 ![GitHub Actions UI - Succesful build](./img/github_actions_ui.PNG)
 
-![Continuous Delivery on Azure](./img/cd_on_azure.PNG)
+![Continuous Delivery on Azure](./img/cd_on_azure.png)
 
 # Overview
 
@@ -39,13 +39,14 @@ This is the final project for the course "Building a CI/CD pipeline" as part of 
 * Project running on Azure App Service
 
 X. Clone the GitHub repository in your Azure Cloud
+`git clone git@github.com:philbier/building-cicd-pipeline.git`
 ![Git repo cloned in Azure shell](./img/git_clone_az_shell.PNG)
 
 * Passing tests that are displayed after running the `make all` command from the `Makefile`
-X. Locally test the code
+X. Navigate into the cloned rep and ocally test the code
     a. Run `make setup` to set up virtual environment
     b. Run `source ~/.building-cicd-pipeline/bin/activate the command` to source into the virtual environment
-    c. Run `make all` to install requirements as well as do linting and testing
+    c. Run `make all` to install requirements as well as run linting and testing
 
 * Output of a test run
 
