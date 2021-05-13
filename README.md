@@ -1,14 +1,9 @@
 [![Python application test with Github Actions](https://github.com/philbier/building-cicd-pipeline/actions/workflows/pythonapp.yml/badge.svg?branch=main)](https://github.com/philbier/building-cicd-pipeline/actions/workflows/pythonapp.yml)
 
-# building-cicd-pipeline
-This is the final project for the course "Building a CI/CD pipeline" as part of of the Udacity Cloud DevOps Nanodegree
+# Building a CI/CD Pipeline
+
 
 ![Set up Azure Cloud Shell](./img/set_up_az_shell.png)
-
-
-
-![Succesfull test of hello.py](./img/test_hello.PNG)
-
 
 
 ![Configure GitHub Actions](./img/configure_github_actions.png)
@@ -18,7 +13,7 @@ This is the final project for the course "Building a CI/CD pipeline" as part of 
 ![Continuous Delivery on Azure](./img/cd_on_azure.png)
 
 # Overview
-
+This is the final project for the course "Building a CI/CD pipeline" as part of of the Udacity Cloud DevOps Nanodegree
 <TODO: complete this with an overview of your project>
 
 ## Project Plan
@@ -34,21 +29,18 @@ This is the final project for the course "Building a CI/CD pipeline" as part of 
 
 <TODO:  Instructions for running the Python project.  How could a user with no context run this project without asking you for any help.  Include screenshots with explicit steps to create that work. Be sure to at least include the following screenshots:
 
-
-
 * Project running on Azure App Service
 
-X. Clone the GitHub repository in your Azure Cloud
-`git clone git@github.com:philbier/building-cicd-pipeline.git`
+2. Clone the GitHub repository in your Azure Cloud  
+`git clone git@github.com:philbier/building-cicd-pipeline.git`  
 ![Git repo cloned in Azure shell](./img/git_clone_az_shell.PNG)
 
-* Passing tests that are displayed after running the `make all` command from the `Makefile`
-X. Navigate into the cloned rep and ocally test the code
-    a. Run `make setup` to set up virtual environment
-    b. Run `source ~/.building-cicd-pipeline/bin/activate the command` to source into the virtual environment
-    c. Run `make all` to install requirements as well as run linting and testing
-
-* Output of a test run
+3. Navigate into the cloned repo and ocally test the code  
+    a. Run `make setup` to set up virtual environment  
+    b. Run `source ~/.building-cicd-pipeline/bin/activate the command` to source into the virtual environment  
+    c. Run `make all` to install requirements as well as run linting and testing  
+You should see the following output for linting an testing  
+![Succesfull test of hello.py](./img/test1.PNG)
 
 * Successful deploy of the project in Azure Pipelines.  [Note the official documentation should be referred to and double checked as you setup CI/CD](https://docs.microsoft.com/en-us/azure/devops/pipelines/ecosystems/python-webapp?view=azure-devops).
 
