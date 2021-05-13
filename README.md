@@ -31,8 +31,11 @@ This is the final project for the course "Building a CI/CD pipeline" as part of 
 
 * Project running on Azure App Service
 
-2. Clone the GitHub repository in your Azure Cloud  
-`git clone git@github.com:philbier/building-cicd-pipeline.git`  
+2. Clone the GitHub repository in your Azure Cloud
+```bash  
+git clone git@github.com:philbier/building-cicd-pipeline.git
+``` 
+  
 ![Git repo cloned in Azure shell](./img/git_clone_az_shell.PNG)
 
 3. Navigate into the cloned repo and ocally test the code  
