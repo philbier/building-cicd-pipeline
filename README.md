@@ -17,8 +17,6 @@ This is the final project for the course "Building a CI/CD pipeline" as part of 
 
 ![Continuous Delivery on Azure](./img/cd_on_azure.PNG)
 
-
-
 # Overview
 
 <TODO: complete this with an overview of your project>
