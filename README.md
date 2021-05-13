@@ -5,7 +5,7 @@ This is the final project for the course "Building a CI/CD pipeline" as part of 
 
 ![Set up Azure Cloud Shell](./img/set_up_az_shell.PNG)
 
-![Git repo cloned in Azure shell](./img/git_clone_az_shell.PNG)
+
 
 ![Succesfull test of hello.py](./img/test_hello.PNG)
 
@@ -34,11 +34,18 @@ This is the final project for the course "Building a CI/CD pipeline" as part of 
 
 <TODO:  Instructions for running the Python project.  How could a user with no context run this project without asking you for any help.  Include screenshots with explicit steps to create that work. Be sure to at least include the following screenshots:
 
+
+
 * Project running on Azure App Service
 
-* Project cloned into Azure Cloud Shell
+X. Clone the GitHub repository in your Azure Cloud
+![Git repo cloned in Azure shell](./img/git_clone_az_shell.PNG)
 
 * Passing tests that are displayed after running the `make all` command from the `Makefile`
+X. Locally test the code
+    a. Run `make setup` to set up virtual environment
+    b. Run `source ~/.building-cicd-pipeline/bin/activate the command` to source into the virtual environment
+    c. Run `make all` to install requirements as well as do linting and testing
 
 * Output of a test run
 
