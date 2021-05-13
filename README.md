@@ -38,7 +38,7 @@ git clone git@github.com:philbier/building-cicd-pipeline.git
 
 ![Git repo cloned in Azure shell](./img/git_clone_az_shell.PNG)
 
-3. **Navigate into the cloned repo and locally test the code** 
+3. **Navigate into the cloned repo and locally test the code**   
     a. Run `make setup` to set up virtual environment  
     b. Run `source ~/.building-cicd-pipeline/bin/activate the command` to source into the virtual environment  
     c. Run `make all` to install requirements as well as run linting and testing  

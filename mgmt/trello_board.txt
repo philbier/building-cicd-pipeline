@@ -1,0 +1,15 @@
+Set up Project & Continuous Integration
+- Create a Github Repo & connect to GitHub
+-- Create ssh-keys in Azure Cloud Shell
+-- Upload ssh-keys to Github
+- Create scaffolding for the project
+-- Create Makefile
+-- Create requirements.txt (include dependencies, linting & testing steps)
+-- Create test code
+
+Set up GitHub Actions as build server
+- Setup Workflow
+-- Adjust standard template
+- Test run Workflow
+
+Extend to CI to CI/CD pipeline
