@@ -31,19 +31,19 @@ This is the final project for the course "Building a CI/CD pipeline" as part of 
 
 * Project running on Azure App Service
 
-2. Clone the GitHub repository in your Azure Cloud
+2. **Clone the GitHub repository in your Azure Cloud**
 ```bash  
 git clone git@github.com:philbier/building-cicd-pipeline.git
 ``` 
 
 ![Git repo cloned in Azure shell](./img/git_clone_az_shell.PNG)
 
-3. Navigate into the cloned repo and ocally test the code  
+3. **Navigate into the cloned repo and locally test the code** 
     a. Run `make setup` to set up virtual environment  
     b. Run `source ~/.building-cicd-pipeline/bin/activate the command` to source into the virtual environment  
     c. Run `make all` to install requirements as well as run linting and testing  
 You should see the following output for linting an testing
-  
+
 ![Succesfull test of hello.py](./img/test1.PNG)
 
 * Successful deploy of the project in Azure Pipelines.  [Note the official documentation should be referred to and double checked as you setup CI/CD](https://docs.microsoft.com/en-us/azure/devops/pipelines/ecosystems/python-webapp?view=azure-devops).
