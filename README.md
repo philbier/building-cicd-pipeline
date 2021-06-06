@@ -5,11 +5,6 @@
 
 ![Set up Azure Cloud Shell](./img/set_up_az_shell.png)
 
-
-![Configure GitHub Actions](./img/configure_github_actions.png)
-
-![GitHub Actions UI - Succesful build](./img/github_actions_ui.PNG)
-
 ![Continuous Delivery on Azure](./img/cd_on_azure.png)
 
 # Overview
@@ -45,6 +40,18 @@ git clone git@github.com:philbier/building-cicd-pipeline.git
 You should see the following output for linting an testing
 
 ![Succesfull test of hello.py](./img/test1.PNG)
+
+4. **Configure continuous integration with Github Actions**
+The follwing screenshots shows the desired architecture where a code push from Azure Cloud shell to GitHub triggers a Github Action.
+
+![Configure GitHub Actions](./img/configure_github_actions.png)
+
+The cloned repository already contains the workflow `pythonapp.yml`. You should find the workflow when clicking on the Actions tab within the main view of your GitHub repository. Test the workflow by making a small change (f.e. to the README file) and check the workflow run afterwards. Your run should look be successful and look like this.
+
+![GitHub Actions UI - Succesful build](./img/github_actions_ui.PNG)
+
+
+
 
 * Successful deploy of the project in Azure Pipelines.  [Note the official documentation should be referred to and double checked as you setup CI/CD](https://docs.microsoft.com/en-us/azure/devops/pipelines/ecosystems/python-webapp?view=azure-devops).
 
