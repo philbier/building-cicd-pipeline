@@ -42,20 +42,40 @@ You should see the following output for linting an testing
 ![Succesfull test of hello.py](./img/test1.PNG)
 
 4. **Configure continuous integration with Github Actions**
-The follwing screenshots shows the desired architecture where a code push from Azure Cloud shell to GitHub triggers a Github Action.
+The follwing diagram shows the desired architecture where a code push from Azure Cloud shell to GitHub triggers a Github Action.
 
 ![Configure GitHub Actions](./img/configure_github_actions.png)
 
-The cloned repository already contains the workflow `pythonapp.yml`. You should find the workflow when clicking on the Actions tab within the main view of your GitHub repository. Test the workflow by making a small change (f.e. to the README file) and check the workflow run afterwards. Your run should look be successful and look like this.
+The cloned repository already contains the workflow `pythonapp.yml`. You should find the workflow when clicking on the Actions tab within the main view of your GitHub repository. Test the workflow by making a small change (f.e. to the README file) and check the workflow run afterwards. Your run should be successful and look like this.
 
 ![GitHub Actions UI - Succesful build](./img/github_actions_ui.PNG)
 
+5. **Configure continuous delivery pipeline on Azure DevOps**
+The follwing diagram depicts the desired end state. When code changes in your GitHub repository, it will trigger an Azure pipeline that deploys Flask code as an Azure App Service. Follow these steps (please be aware that need to authenticate probably several times and for that pop ups within your browser must be enabled):
+    a. Create a resource group
+    b. Create a Azure Web App within that resource group
+    c. Check wether you web app is working via https://<your-appservice>.azurewebsites.net/
+    d. Go to your Azure DevOps Organization an create a project  
+    e. Within project settings go to **Service Connections** and create one  
+        Scope level: Subscription  
+        Subscription: <Your subscription>  
+        Resource Group: <Resource Group you created in a.>  
+        Service connection name: Flask ML App Service  
+    f. Go to **Pipelines** and create pipeline using the option **GitHub (YAML)**, select your repository and configure your Azure Web App with **Python to Linux Web App on Azure**
+    g. Checkin your Azure Pipeline YAML file into Github
+    h. Run your Azure pipeline workflow
+
+A successful deployment should look like the following screenshot
+![Azure Pipeline - Succesful deployment](./img/azure_deployment.PNG)
 
 
-
-* Successful deploy of the project in Azure Pipelines.  [Note the official documentation should be referred to and double checked as you setup CI/CD](https://docs.microsoft.com/en-us/azure/devops/pipelines/ecosystems/python-webapp?view=azure-devops).
-
-* Running Azure App Service from Azure Pipelines automatic deployment
+6. Verify prediction with `make_predict_azure_app.sh`
+    a. Change the line in `make_predict_azure_app.sh` to the following
+    ```
+    -X POST https://<yourappname>.azurewebsites.net:$PORT/predict
+    ```
+    b. Commit and push the change to GitHub and check build & deployment.
+    c. Run `https://<yourappname>.azurewebsites.net:$PORT/predict` in your browser
 
 * Successful prediction from deployed flask app in Azure Cloud Shell.  [Use this file as a template for the deployed prediction](https://github.com/udacity/nd082-Azure-Cloud-DevOps-Starter-Code/blob/master/C2-AgileDevelopmentwithAzure/project/starter_files/flask-sklearn/make_predict_azure_app.sh).
 The output should look similar to this:
