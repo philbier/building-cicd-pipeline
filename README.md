@@ -69,8 +69,8 @@ The cloned repository already contains the workflow `pythonapp.yml`. You should 
     - **Resource Group**: *Resource Group you created*  
     - **Service connection name**: Flask ML App Service  
 3. Go to **Pipelines** and create pipeline using the option **GitHub (YAML)**, select your repository and configure your Azure Web App with **Python to Linux Web App on Azure**  
-    g. Checkin your Azure Pipeline YAML file into Github  
-    h. Run your Azure pipeline workflow
+4. Checkin your Azure Pipeline YAML file into Github  
+5. Run your Azure pipeline workflow
 
 A successful deployment should look like the following screenshot:
 
@@ -82,7 +82,7 @@ A successful deployment should look like the following screenshot:
 ```
 -X POST https://<yourappname>.azurewebsites.net:$PORT/predict
  ```
-2. Commit and push the change to GitHub and check build & deployment.  
+2. Commit and push the change to GitHub and check build & deployment  
 3. Run `./make_predict_azure_app.sh` in Azure Cloud Shell 
 
 The output should look similar to this:  
@@ -92,7 +92,21 @@ The output should look similar to this:
 When running, the Azure Web App produces streamed log files that should look like this:
 
 ```JSON
-[{"machineName":"pl0sdlwk00000Z_default","lastUpdated":"2021-06-07T18:04:08.2996867Z","size":2948,"href":"https://flask-web-app.scm.azurewebsites.net/api/vfs/LogFiles/2021_06_07_pl0sdlwk00000Z_default_docker.log","path":"/home/LogFiles/2021_06_07_pl0sdlwk00000Z_default_docker.log"},{"machineName":"pl0sdlwk00000Z","lastUpdated":"2021-06-07T18:04:11.0911659Z","size":714,"href":"https://flask-web-app.scm.azurewebsites.net/api/vfs/LogFiles/2021_06_07_pl0sdlwk00000Z_docker.log","path":"/home/LogFiles/2021_06_07_pl0sdlwk00000Z_docker.log"}]
+[
+    {
+        "machineName":"pl0sdlwk00000Z_default",
+        "lastUpdated":"2021-06-07T18:04:08.2996867Z",
+        "size":2948,
+        "href":"https://flask-web-app.scm.azurewebsites.net/api/vfs/LogFiles/2021_06_07_pl0sdlwk00000Z_default_docker.log",
+        "path":"/home/LogFiles/2021_06_07_pl0sdlwk00000Z_default_docker.log"
+    },
+    {
+        "machineName":"pl0sdlwk00000Z",
+        "lastUpdated":"2021-06-07T18:04:11.0911659Z",
+        "size":714,
+        "href":"https://flask-web-app.scm.azurewebsites.net/api/vfs/LogFiles/2021_06_07_pl0sdlwk00000Z_docker.log","path":"/home/LogFiles/2021_06_07_pl0sdlwk00000Z_docker.log"
+    }
+]
 ``` 
 
 ## Enhancements
