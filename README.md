@@ -2,11 +2,6 @@
 
 # Building a CI/CD Pipeline
 
-
-![Set up Azure Cloud Shell](./img/set_up_az_shell.png)
-
-![Continuous Delivery on Azure](./img/cd_on_azure.png)
-
 ## Overview
 This is the final project for the course "Building a CI/CD pipeline" as part of of the Udacity Cloud DevOps Nanodegree. The goal is to build a complete continuous integration and continuous delivery pipeline using the following tools and concepts:
 * **Github** :octocat: : as a central code repository
