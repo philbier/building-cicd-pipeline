@@ -10,7 +10,7 @@
 ## Overview
 This is the final project for the course "Building a CI/CD pipeline" as part of of the Udacity Cloud DevOps Nanodegree. The goal is to build a complete continuous integration and continuous delivery pipeline using the following tools and concepts:
 * **Github** :octocat: : as a central code repository
-* **Github Actions** :octocat:: to trigger continous integration builds
+* **Github Actions** : to trigger continous integration builds
 * **Makefile**: that contains package dependencies, linting and testing steps
 * **Azure Pipelines**: to continously deliver an Azure Web App if code is pushed to Github.
 
@@ -49,33 +49,36 @@ You should see the following output for linting an testing
 
 
 ### Configure continuous integration with Github Actions
-The cloned repository already contains the workflow `pythonapp.yml`. You should find the workflow when clicking on the Actions tab within the main view of your GitHub repository. Test the workflow by making a small change (f.e. to the README file) and check if the workflow runs. Your run should look like this.
+The cloned repository already contains the workflow `pythonapp.yml`. You should find the workflow when clicking on the Actions tab within the main view of your GitHub repository. Test the workflow by making a small change (f.e. to the README file) and check if the workflow runs. Your run should look like this:
 
 ![GitHub Actions UI - Succesful build](./img/github_actions_ui.PNG)
 
 ### Create a Azure Web App Service
 1. Create a resource group  
 2. Create a Azure Web App within that resource group  
-3. Check wether you web app is working via https://***your-appservice***.azurewebsites.net/  
+3. Check wether your web app is working via https://***your-appservice***.azurewebsites.net/  
+
 
 ### Configure continuous delivery pipeline on Azure DevOps**
-(please be aware pop ups within your browser must be enabled, as you need to need to authenticate several times)
+(please be aware that pop ups within your browser must be enabled, as you need to need to authenticate several times)
 
-1. Go to your Azure DevOps Organization an create a project  
+1. Go to your Azure DevOps Organization and create a project  
 2. Within project settings go to **Service Connections** and create one with:  
     - **Scope level**: Subscription  
-    - **Subscription**: <Your subscription>  
-    - **Resource Group**: <Resource Group you created in a.>  
+    - **Subscription**: *Your subscription*  
+    - **Resource Group**: *Resource Group you created*  
     - **Service connection name**: Flask ML App Service  
-3. Go to **Pipelines** and create pipeline using the option **GitHub (YAML)**, select your repository and configure your Azure Web App with **Python to Linux Web App on Azure**
-    g. Checkin your Azure Pipeline YAML file into Github
+3. Go to **Pipelines** and create pipeline using the option **GitHub (YAML)**, select your repository and configure your Azure Web App with **Python to Linux Web App on Azure**  
+    g. Checkin your Azure Pipeline YAML file into Github  
     h. Run your Azure pipeline workflow
 
-A successful deployment should look like the following screenshot
+A successful deployment should look like the following screenshot:
+
 ![Azure Pipeline - Succesful deployment](./img/azure_deployment.PNG)
 
+
 ### Verify your deployment
-1. In order for create a prediction via the web app you need to change the following line within `make_predict_azure_app.sh`  
+1. In order for a prediction to work via the web app you need to change the following line within `make_predict_azure_app.sh`  
 ```
 -X POST https://<yourappname>.azurewebsites.net:$PORT/predict
  ```
@@ -83,6 +86,7 @@ A successful deployment should look like the following screenshot
 3. Run `./make_predict_azure_app.sh` in Azure Cloud Shell 
 
 The output should look similar to this:  
+
 ![Verify Predict](./img/verify_predict.PNG)
 
 When running, the Azure Web App produces streamed log files that should look like this:
