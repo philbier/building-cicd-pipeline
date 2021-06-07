@@ -24,8 +24,7 @@ For this project a Pyhton-based machine learning application using the Flask web
 
 ## Instructions
 
-<TODO:  
-* Architectural Diagram (Shows how key parts of the system work)>
+![Project architecture](./img/project_architecture.PNG)
 
 ### Get the code
 1. Make sure that your Azure Cloud Shell authenticates successfully against Github with ssh-keys  
@@ -110,6 +109,11 @@ When running, the Azure Web App produces streamed log files that should look lik
 ``` 
 
 ## Enhancements
+
+Possible enhancements are:
+* create a dev branch in Github to test code in dedicated test environment before deploying to production
+* use Azure Container Instances to deploy the web app
+
 
 <TODO: A short description of how to improve the project in the future>
 
