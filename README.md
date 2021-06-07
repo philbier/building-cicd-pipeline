@@ -7,10 +7,10 @@
 
 ![Continuous Delivery on Azure](./img/cd_on_azure.png)
 
-# Overview
+## Overview
 This is the final project for the course "Building a CI/CD pipeline" as part of of the Udacity Cloud DevOps Nanodegree. The goal is to build a complete continuous integration and continuous delivery pipeline using the following tools and concepts:
-* **Github**: as a central code repository
-* **Github Actions**: to trigger continous integration builds
+* **Github** :octocat: : as a central code repository
+* **Github Actions** :octocat:: to trigger continous integration builds
 * **Makefile**: that contains package dependencies, linting and testing steps
 * **Azure Pipelines**: to continously deliver an Azure Web App if code is pushed to Github.
 
@@ -28,7 +28,7 @@ For this project a Pyhton-based machine learning application using the Flask web
 * Architectural Diagram (Shows how key parts of the system work)>
 
 ### Get the code
-1. Make sure that your Azure Cloud Shell authenticates successfully agains Github with ssh-keys  
+1. Make sure that your Azure Cloud Shell authenticates successfully against Github with ssh-keys  
 2. Clone this Github repo into your Azure Cloud Shell or local environment  
 ```bash  
 git clone git@github.com:philbier/building-cicd-pipeline.git
@@ -36,24 +36,27 @@ git clone git@github.com:philbier/building-cicd-pipeline.git
 
 ![Git repo cloned in Azure shell](./img/git_clone_az_shell.PNG)
 
+
 ### Locally test the CI process
 Navigate into the cloned repo and locally test the code   
-1. Run `make setup` to set up virtual environment      
+1. Run `make setup` to set up a virtual environment      
 2. Run `source ~/.building-cicd-pipeline/bin/activate` to source into the virtual environment    
 3. Run `make all` to install requirements as well as run linting and testing    
+
 You should see the following output for linting an testing  
 
 ![Succesfull test of hello.py](./img/test1.PNG)
 
+
 ### Configure continuous integration with Github Actions
-The cloned repository already contains the workflow `pythonapp.yml`. You should find the workflow when clicking on the Actions tab within the main view of your GitHub repository. Test the workflow by making a small change (f.e. to the README file) and if the workflow runs. Your run should look like this.
+The cloned repository already contains the workflow `pythonapp.yml`. You should find the workflow when clicking on the Actions tab within the main view of your GitHub repository. Test the workflow by making a small change (f.e. to the README file) and check if the workflow runs. Your run should look like this.
 
 ![GitHub Actions UI - Succesful build](./img/github_actions_ui.PNG)
 
 ### Create a Azure Web App Service
 1. Create a resource group  
 2. Create a Azure Web App within that resource group  
-3. Check wether you web app is working via https://<your-appservice>.azurewebsites.net/  
+3. Check wether you web app is working via https://***your-appservice***.azurewebsites.net/  
 
 ### Configure continuous delivery pipeline on Azure DevOps**
 (please be aware pop ups within your browser must be enabled, as you need to need to authenticate several times)
