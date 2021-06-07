@@ -9,7 +9,7 @@ This is the final project for the course "Building a CI/CD pipeline" as part of 
 * **Makefile**: that contains package dependencies, linting and testing steps
 * **Azure Pipelines**: to continously deliver an Azure Web App if code is pushed to Github.
 
-For this project a Pyhton-based machine learning application using the Flask web framework was provided. The model of that web app has been trained to predict housing prices in Boston accoriding to several feautres, such as average rooms in a home and data about highway access, etc.
+For this project a Pyhton-based machine learning application using the Flask web framework was provided. The model of that web app has been trained to predict housing prices in Boston according to several feautres, such as average rooms in a home and data about highway access, etc.
 
 ## Project Plan
 <TODO: Project Plan
@@ -108,9 +108,6 @@ When running, the Azure Web App produces streamed log files that should look lik
 Possible enhancements are:
 * create a dev branch in Github to test code in dedicated test environment before deploying to production
 * use Azure Container Instances to deploy the web app
-
-
-<TODO: A short description of how to improve the project in the future>
 
 ## Demo 
 
