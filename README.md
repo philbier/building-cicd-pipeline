@@ -3,7 +3,7 @@
 # Building a CI/CD Pipeline
 
 ## Overview
-This is the final project for the course "Building a CI/CD pipeline" as part of of the Udacity Cloud DevOps Nanodegree. The goal is to build a complete continuous integration and continuous delivery pipeline using the following tools and concepts:
+This is the final project for the course **Building a CI/CD pipeline** as part of of the Udacity **Cloud DevOps Nanodegree using Microsoft Azure**. The goal is to build a complete continuous integration and continuous delivery pipeline using the following tools and concepts:
 * **Github** :octocat: : as a central code repository
 * **Github Actions** : to trigger continous integration builds
 * **Makefile**: that contains package dependencies, linting and testing steps
@@ -11,10 +11,10 @@ This is the final project for the course "Building a CI/CD pipeline" as part of 
 
 For this project a Pyhton-based machine learning application using the Flask web framework was provided. The model of that web app has been trained to predict housing prices in Boston according to several feautres, such as average rooms in a home and data about highway access, etc.
 
-## Project Plan
-<TODO: Project Plan
+## Project Management
+<TODO: Trello Board
 
-* A link to a Trello board for the project
+* ![Project Plan](./mgmt/project-plan.xlsx)
 * A link to a spreadsheet that includes the original and final project plan>
 
 ## Instructions
